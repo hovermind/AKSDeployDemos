@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "ConsoleApp.KeyVaultAccess": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
