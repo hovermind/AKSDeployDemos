@@ -1,27 +1,28 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System.Reflection;
 
 namespace API.Bar.Controllers
 {
     [ApiController]
-    [Route("bar")]
+    [Route("api/bar")]
     public class BarController : ControllerBase
     {
         [HttpGet("")]
         public string Index()
         {
-            return "BarController.Index()";
+            return $@"{{ ""controller-name"" : ""{GetType().Name}"", ""method-name"" : ""{MethodBase.GetCurrentMethod().Name}"" }}";
         }
 
         [HttpGet("test")]
         public string Test()
         {
-            return "BarController.Test()";
+            return $@"{{ ""controller-name"" : ""{GetType().Name}"", ""method-name"" : ""{MethodBase.GetCurrentMethod().Name}"" }}";
         }
 
         [HttpGet("xyz")]
         public string Xyz()
         {
-            return "BarController.Xyz()";
+            return $@"{{ ""controller-name"" : ""{GetType().Name}"", ""method-name"" : ""{MethodBase.GetCurrentMethod().Name}"" }}";
         }
     }
 }
