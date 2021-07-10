@@ -46,6 +46,7 @@ namespace API.Bar
 
             app.UseHttpsRedirection();
 
+            app.UsePathBase("/api/bar");
             app.UseRouting();
 
             app.UseAuthorization();

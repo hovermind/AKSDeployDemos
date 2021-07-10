@@ -3,13 +3,11 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace API.Bar.Controllers
 {
-    [ApiController]
-    [Route("api/bar/wf")]
-    public class WeatherForecastController : ControllerBase
+    [Route("weather-forecast")]
+    public class WeatherForecastController : BarBaseApiController
     {
         private static readonly string[] Summaries = new[]
         {
@@ -23,8 +21,8 @@ namespace API.Bar.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("")]
+        public IEnumerable<WeatherForecast> Index()
         {
             var rng = new Random();
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
