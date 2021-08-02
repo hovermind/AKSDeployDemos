@@ -1,0 +1,60 @@
+﻿@model MVC.CsiSmb.Models.SharedFolderModel;
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="">Kubenetes Storage - SMB File Share Test</h1>
+    <p class="">(ASP.Net Core MVC Application | DeploymentCount: 12)</p>
+</div>
+
+
+
+
+@if (Model.IsAccessible)
+{
+<h4 class="text-success">'@Model.MountPath' is accessible</h4>
+
+@if (Model.HasFiles)
+    {
+<p class="text-primary">Files: </p>
+
+<ul>
+    @foreach (var item in Model.FileEntries)
+            {
+    <li>@item</li>
+            }
+</ul>
+    }
+    else
+    {
+<p class="text-warning">No Files</p>
+    }
+
+<div class="row">
+
+    <div class="col-md-4">
+
+        <form asp-action="Index">
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="TestFileName" class="control-label"></label>
+                <input asp-for="TestFileName" class="form-control" />
+                <span asp-validation-for="TestFileName" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+}
+else
+{
+<h4 class="text-danger">'@Model.MountPath' is NOT accessible</h4>
+}
