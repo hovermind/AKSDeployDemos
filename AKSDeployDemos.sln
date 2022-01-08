@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31229.75
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp.KeyVaultAccess", "ConsoleApp.KeyVaultAccess\ConsoleApp.KeyVaultAccess.csproj", "{25A9DAB3-5719-4C31-8FE8-CED12BD86E7D}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API.Bar", "API.Bar\API.Bar.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LetsEncryptStaging", "LetsEncryptStaging\LetsEncryptStaging.csproj", "{11B2E851-9DA6-4DB5-832E-0A576C2B62F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVC.CsiSmb", "MVC.CsiSmb\MVC.CsiSmb.csproj", "{1E754352-9675-411D-8B77-87E0C7347AEC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVC.CsiSmb", "MVC.CsiSmb\MVC.CsiSmb.csproj", "{1E754352-9675-411D-8B77-87E0C7347AEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XyzAPI", "XyzAPI\XyzAPI.csproj", "{FD447623-99D1-4B39-867E-53424EEAEC24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{1E754352-9675-411D-8B77-87E0C7347AEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1E754352-9675-411D-8B77-87E0C7347AEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1E754352-9675-411D-8B77-87E0C7347AEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD447623-99D1-4B39-867E-53424EEAEC24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD447623-99D1-4B39-867E-53424EEAEC24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD447623-99D1-4B39-867E-53424EEAEC24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD447623-99D1-4B39-867E-53424EEAEC24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
